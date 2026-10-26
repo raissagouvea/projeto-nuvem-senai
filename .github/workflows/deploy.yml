@@ -3,6 +3,8 @@ name: Deploy CI/CD to AWS EC2
 on:
   push:
     branches: [ "main" ]
+  workflow_dispatch:
+
 
 jobs:
   build-and-deploy:
