@@ -4,6 +4,7 @@ on:
     workflows: ["Builds and Tests"]
     types:
       - completed
+  workflow_dispatch:
 
 jobs:
   Deploy:
@@ -25,4 +26,4 @@ jobs:
             sleep 5
             curl -f http://localhost:8080/health || exit 1
             echo "Deploy concluído com sucesso!"
-            sudo docker image prune -f
+
